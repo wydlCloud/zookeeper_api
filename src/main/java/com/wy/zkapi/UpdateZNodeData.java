@@ -1,4 +1,4 @@
-package com.wy.api;
+package com.wy.zkapi;
 
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
@@ -7,8 +7,6 @@ import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @author yunze
