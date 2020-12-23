@@ -30,13 +30,13 @@ public class GetNodeData {
 
         List<String> children = zkClient.getChildren("/wy-persistent");
         // 注册监听事件
-         /*
+         /**
             客户端可以对一个不存在的节点进行子节点变更的监听
             只要该节点的子节点列表发生变化，或者该节点本身被创建或者删除，都会触发监听
          */
         zkClient.subscribeChildChanges("/wy-persistent-get", new IZkChildListener() {
 
-            /*
+            /**
                 s : parentPath
                 list : 变化后子节点列表
              */
@@ -47,7 +47,7 @@ public class GetNodeData {
             }
         });
 
-        //测试
+        //测试  创建此节点，也会触发回调的动作
         zkClient.createPersistent("/wy-persistent-get");
         Thread.sleep(1000);
 
